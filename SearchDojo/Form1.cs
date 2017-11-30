@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,21 +20,14 @@ namespace SearchDojo
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Fart_Click(object sender, EventArgs e)
         {
             MatchBox.Text = "";
-            string text = TextBox.Text;
-            string pattern = @"" + RegexBox.Text;
-            foreach (var word in text.Split(' '))
-            {
-                if (Regex.IsMatch(word, pattern))
-                {
-                    MatchBox.AppendText(word);
-                    MatchBox.AppendText(Environment.NewLine);
-                }
+            for (int i = 0; i < 1000; i++){
+                MatchBox.AppendText(" FaRt");
             }
-
-            //MatchBox.Text 
+            MessageBox.Show(MatchBox.Text);
+            this.Close();
         }
 
         private void RegexBox_TextChanged(object sender, EventArgs e)
@@ -43,10 +37,17 @@ namespace SearchDojo
             string pattern = @"" + RegexBox.Text;
             foreach (var word in text.Split(' '))
             {
-                if (Regex.IsMatch(word, pattern))
+                try
                 {
-                    MatchBox.AppendText(word);
-                    MatchBox.AppendText(Environment.NewLine);
+                    if (Regex.IsMatch(word, pattern))
+                    {
+                        MatchBox.AppendText(word);
+                        MatchBox.AppendText(Environment.NewLine);
+                    }
+                }
+                catch (Exception m)
+                {
+                    Console.WriteLine(m.Message);
                 }
             }
         }
