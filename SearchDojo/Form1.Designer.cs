@@ -39,36 +39,37 @@
             // 
             // TextBox
             // 
-            this.TextBox.Location = new System.Drawing.Point(33, 37);
-            this.TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBox.Location = new System.Drawing.Point(44, 46);
+            this.TextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBox.Multiline = true;
             this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(295, 186);
+            this.TextBox.Size = new System.Drawing.Size(392, 228);
             this.TextBox.TabIndex = 0;
             // 
             // MatchBox
             // 
-            this.MatchBox.Location = new System.Drawing.Point(369, 37);
-            this.MatchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MatchBox.Location = new System.Drawing.Point(492, 46);
+            this.MatchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MatchBox.Multiline = true;
             this.MatchBox.Name = "MatchBox";
-            this.MatchBox.Size = new System.Drawing.Size(224, 186);
+            this.MatchBox.Size = new System.Drawing.Size(297, 228);
             this.MatchBox.TabIndex = 1;
             // 
             // RegexBox
             // 
-            this.RegexBox.Location = new System.Drawing.Point(114, 260);
-            this.RegexBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RegexBox.Location = new System.Drawing.Point(152, 320);
+            this.RegexBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegexBox.Name = "RegexBox";
-            this.RegexBox.Size = new System.Drawing.Size(214, 20);
+            this.RegexBox.Size = new System.Drawing.Size(284, 22);
             this.RegexBox.TabIndex = 2;
+            this.RegexBox.TextChanged += new System.EventHandler(this.RegexBox_TextChanged);
             // 
             // FartButton
             // 
-            this.FartButton.Location = new System.Drawing.Point(369, 259);
-            this.FartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FartButton.Location = new System.Drawing.Point(492, 319);
+            this.FartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FartButton.Name = "FartButton";
-            this.FartButton.Size = new System.Drawing.Size(138, 19);
+            this.FartButton.Size = new System.Drawing.Size(184, 23);
             this.FartButton.TabIndex = 3;
             this.FartButton.Text = "Fart";
             this.FartButton.UseVisualStyleBackColor = true;
@@ -77,38 +78,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(41, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(39, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Text:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(367, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(489, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Matched:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 262);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(88, 322);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Pattern:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 309);
+            this.ClientSize = new System.Drawing.Size(857, 380);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -116,7 +114,7 @@
             this.Controls.Add(this.RegexBox);
             this.Controls.Add(this.MatchBox);
             this.Controls.Add(this.TextBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

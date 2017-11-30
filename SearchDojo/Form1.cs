@@ -21,18 +21,34 @@ namespace SearchDojo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MatchBox.Text = "";
             string text = TextBox.Text;
             string pattern = @"" + RegexBox.Text;
-            List < string > result= new List<string>(); 
             foreach (var word in text.Split(' '))
             {
                 if (Regex.IsMatch(word, pattern))
                 {
-                    result.Add(word);
+                    MatchBox.AppendText(word);
+                    MatchBox.AppendText(Environment.NewLine);
                 }
             }
-            
+
             //MatchBox.Text 
+        }
+
+        private void RegexBox_TextChanged(object sender, EventArgs e)
+        {
+            MatchBox.Text = "";
+            string text = TextBox.Text;
+            string pattern = @"" + RegexBox.Text;
+            foreach (var word in text.Split(' '))
+            {
+                if (Regex.IsMatch(word, pattern))
+                {
+                    MatchBox.AppendText(word);
+                    MatchBox.AppendText(Environment.NewLine);
+                }
+            }
         }
     }
 }
