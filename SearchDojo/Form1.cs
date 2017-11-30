@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +16,23 @@ namespace SearchDojo
         public Form1()
         {
             InitializeComponent();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string text = TextBox.Text;
+            string pattern = @"" + RegexBox.Text;
+            List < string > result= new List<string>(); 
+            foreach (var word in text.Split(' '))
+            {
+                if (Regex.IsMatch(word, pattern))
+                {
+                    result.Add(word);
+                }
+            }
+            
+            //MatchBox.Text 
         }
     }
 }
